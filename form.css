@@ -1,0 +1,16 @@
+.container {
+  margin: auto;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  height: 100px;
+  padding: 20px;
+}
+.text,.input {
+  padding-bottom: 10px;
+}
+.inputValue {
+  padding-top: 10px;
+}

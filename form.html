@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Creditcard Input Form</title>
+    <script src="jquery.js"></script>
+    <script src="detectNetwork.js"></script>
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <script>
+      $( document ).ready(function() {
+        $(document).on("input", ".numeric",function() {
+        this.value = this.value.replace(/\D/g,'');
+        });
+        var divContainerHtml = $('<div class="inputValue"></div>');
+        $('.button').click(function() {
+          var inputValue = $('input').val();
+          $('.button').append(divContainerHtml);
+          $('.inputValue').text(detectNetwork(inputValue));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">
+        Enter your credit card number, we will tell you the Credit Card provider information.
+      </div>
+      <div class="input">
+        <input type="number"></input>
+      </div>
+      <div class="button">
+        <button type="button">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>
